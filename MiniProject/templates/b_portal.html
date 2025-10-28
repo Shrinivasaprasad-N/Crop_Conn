@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop_Connect - Bidder Portal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='b_portal.css') }}"/>
+</head>
+<body>
+
+  <!-- 🌾 Navbar -->
+  <div class="navbar">
+    <div class="navbar-left">
+      <input type="text" id="search" placeholder="Search crop...">
+    </div>
+    <div class="navbar-right">
+      <button onclick="window.location.href='/wishlist'">+ My Wishlist</button>
+      <button>👤 Profile</button>
+    </div>
+  </div>
+
+  <!-- 🌿 Crop Listing -->
+  <div class="crop-container" id="cropContainer"></div>
+
+  <!-- 🌿 Details Popup -->
+  <div class="details-popup" id="detailsPopup">
+    <div class="details-content">
+      <h3 id="cropName"></h3>
+      <p><strong>Quantity:</strong> <span id="cropQuantity"></span></p>
+      <p><strong>Quality:</strong> <span id="cropQuality"></span></p>
+      <p><strong>Date&Time:</strong> <span id="cropTime"></span></p>
+      <p id="biddingStatus"></p>
+      <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='b_portal.js') }}"></script>
+</body>
+</html>
